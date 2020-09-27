@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.depeexi.securitytest.mapper.UserMapper">
+
+    <select id="findByUserName" parameterType="java.lang.String" resultType="com.depeexi.securitytest.po.Admins">
+        SELECT
+        id,
+        name username,
+        password,
+        role_type roleType
+        FROM
+        user
+        WHERE
+        name = #{userName}
+    </select>
+</mapper>
